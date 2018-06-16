@@ -3,8 +3,8 @@ package com.infoshare.oop.card;
 import java.math.BigDecimal;
 
 public class Card {
-    protected String name;
-    protected String number;
+    protected final String name;
+    protected final String number;
     protected BigDecimal balance;
 
     public Card(String name, String number) {
