@@ -12,5 +12,8 @@ public class Main {
 
         card.pay();
         creditCard.pay();
+
+        System.out.println(card.toString());
+        System.out.println(creditCard.toString());
     }
 }

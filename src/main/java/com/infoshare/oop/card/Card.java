@@ -20,6 +20,11 @@ public class Card {
         System.out.println("Card initialization - constructor with 3 arguments");
     }
 
+    @Override
+    public String toString() {
+        return name + ", " + "number: " + number + ", balance: " + balance + "zł";
+    }
+
     public String getName() {
         return name;
     }

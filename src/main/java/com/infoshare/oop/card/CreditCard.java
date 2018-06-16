@@ -12,6 +12,11 @@ public class CreditCard extends Card {
     }
 
     @Override
+    public String toString() {
+        return super.toString() + ", limit: " + creditLimit + "zł";
+    }
+
+    @Override
     public void pay() {
         System.out.println("Płatność kartą kredytową");
     }
