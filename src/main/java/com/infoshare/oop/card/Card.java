@@ -2,19 +2,19 @@ package com.infoshare.oop.card;
 
 import java.math.BigDecimal;
 
-public class Card {
+public abstract class Card {
     protected final String name;
     protected final String number;
     protected BigDecimal balance;
 
-    public Card(String name, String number) {
+    protected Card(String name, String number) {
         System.out.println("Card initialization - constructor with 2 arguments");
         this.name = name;
         this.number = number;
         this.balance = BigDecimal.ZERO;
     }
 
-    public Card(String name, String number, BigDecimal balance) {
+    protected Card(String name, String number, BigDecimal balance) {
         this(name, number);
         this.balance = balance;
         System.out.println("Card initialization - constructor with 3 arguments");
@@ -37,7 +37,5 @@ public class Card {
         return balance;
     }
 
-    public void pay(){
-        System.out.println("Płatność kartą");
-    }
+    public abstract void pay();
 }
