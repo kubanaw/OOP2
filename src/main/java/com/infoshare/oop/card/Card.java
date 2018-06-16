@@ -37,5 +37,5 @@ public abstract class Card {
         return balance;
     }
 
-    public abstract void pay();
+    public abstract void pay() throws Exception;
 }

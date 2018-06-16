@@ -12,8 +12,17 @@ public class Main {
         Card creditCard = new CreditCard("Karta kredytowa", "123", BigDecimal.ONE, new BigDecimal(200));
         Card debitCard = new DebitCard("Karta debetowa", "12345");
 
-        creditCard.pay();
-        debitCard.pay();
+        try {
+            creditCard.pay();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+
+        try {
+            debitCard.pay();
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
         System.out.println(creditCard.toString());
     }
