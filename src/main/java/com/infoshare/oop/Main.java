@@ -3,6 +3,7 @@ package com.infoshare.oop;
 import com.infoshare.oop.card.Card;
 import com.infoshare.oop.card.CreditCard;
 import com.infoshare.oop.card.DebitCard;
+import com.infoshare.oop.exception.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
@@ -14,15 +15,17 @@ public class Main {
 
         try {
             creditCard.pay();
-        } catch (Exception e){
+        } catch (NotEnoughFundsException e) {
             System.out.println(e.getMessage());
         }
 
+
         try {
             debitCard.pay();
-        } catch (Exception e){
+        } catch (NotEnoughFundsException e) {
             System.out.println(e.getMessage());
         }
+
 
         System.out.println(creditCard.toString());
     }

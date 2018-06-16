@@ -1,5 +1,7 @@
 package com.infoshare.oop.card;
 
+import com.infoshare.oop.exception.NotEnoughFundsException;
+
 import java.math.BigDecimal;
 
 public class DebitCard extends Card {
@@ -13,9 +15,9 @@ public class DebitCard extends Card {
     }
 
     @Override
-    public void pay() throws Exception{
+    public void pay() throws NotEnoughFundsException {
         if(balance.compareTo(BigDecimal.ZERO) <= 0){
-            throw new Exception("Niewystarczająca ilość środków do wykonania płatności kartą debetową");
+            throw new NotEnoughFundsException("Niewystarczająca ilość środków do wykonania płatności kartą debetową");
         }
         System.out.println("Płatność kartą debetową");
     }
