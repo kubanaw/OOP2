@@ -4,7 +4,7 @@ import com.infoshare.oop.exception.NotEnoughFundsException;
 
 import java.math.BigDecimal;
 
-public class CreditCard extends Card {
+public class CreditCard extends Card implements CanTransferTo {
     private final BigDecimal creditLimit;
 
     public CreditCard(String name, String number, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType) {
@@ -24,6 +24,10 @@ public class CreditCard extends Card {
             throw new NotEnoughFundsException("Niewystarczająca ilość środków do wykonania płatności kartą kredytową");
         }
         System.out.println("Płatność kartą kredytową");
+    }
+
+    public void transferToCard(BigDecimal amount) {
+        System.out.println("Spłata karty kredytowej");
     }
 
     public BigDecimal getCreditLimit() {

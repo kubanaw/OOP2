@@ -12,8 +12,9 @@ public class Main {
                 BigDecimal.ONE, new BigDecimal(200), CustomerType.COMPANY);
         Card debitCard = new DebitCard("Karta debetowa", "12345",
                 new BigDecimal("500"), CustomerType.INDIVIDUAL);
-        Card prepaidCard = new PrepaidCard("Karta przedpłacona", "123456",
+        CanTransferTo prepaidCard = new PrepaidCard("Karta przedpłacona", "123456",
                 new BigDecimal("150"), CustomerType.INDIVIDUAL, true);
+
 
         try {
             creditCard.pay();
@@ -21,15 +22,8 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-
         try {
             debitCard.pay();
-        } catch (NotEnoughFundsException e) {
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            prepaidCard.pay();
         } catch (NotEnoughFundsException e) {
             System.out.println(e.getMessage());
         }
@@ -38,5 +32,7 @@ public class Main {
         System.out.println(debitCard.toString());
         System.out.println(creditCard.toString());
         System.out.println(prepaidCard.toString());
+
+        prepaidCard.transferToCard(BigDecimal.ZERO);
     }
 }
