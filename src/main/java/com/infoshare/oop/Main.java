@@ -34,5 +34,11 @@ public class Main {
         System.out.println(prepaidCard.toString());
 
         prepaidCard.transferToCard(BigDecimal.ZERO);
+
+        CanTransferTo canTransferTo = new CanTransferTo() {
+            public void transferToCard(BigDecimal amount) {
+                System.out.println("Transfer to product");
+            }
+        };
     }
 }
