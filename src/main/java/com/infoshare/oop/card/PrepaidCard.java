@@ -30,6 +30,7 @@ public class PrepaidCard extends Card implements CanTransferTo {
         return gift;
     }
 
+
     public void transferToCard(BigDecimal amount) {
         System.out.println("Doładowanie karty prepaid");
     }
