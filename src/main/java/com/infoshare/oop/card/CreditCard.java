@@ -7,8 +7,8 @@ import java.math.BigDecimal;
 public class CreditCard extends Card implements CanTransferTo {
     private final BigDecimal creditLimit;
 
-    public CreditCard(String name, String number, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType) {
-        super(name, number, balance, customerType);
+    public CreditCard(String id, String name, String number, BigDecimal balance, BigDecimal creditLimit, CustomerType customerType) {
+        super(id, name, number, balance, customerType);
         this.creditLimit = creditLimit;
         System.out.println("Credit card initialization");
     }

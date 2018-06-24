@@ -11,11 +11,11 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        Card creditCard = new CreditCard("Karta kredytowa", "123",
+        Card creditCard = new CreditCard("1234","Karta kredytowa", "123",
                 BigDecimal.ONE, new BigDecimal(200), CustomerType.COMPANY);
-        Card debitCard = new DebitCard("Karta debetowa", "12345",
+        Card debitCard = new DebitCard("1234", "Karta debetowa", "12345",
                 new BigDecimal("500"), CustomerType.INDIVIDUAL);
-        CanTransferTo prepaidCard = new PrepaidCard("Karta przedpłacona", "123456",
+        Card prepaidCard = new PrepaidCard("123","Karta przedpłacona", "123456",
                 new BigDecimal("150"), CustomerType.INDIVIDUAL, true);
 
 
@@ -35,7 +35,7 @@ public class Main {
         System.out.println(creditCard.toString());
         System.out.println(prepaidCard.toString());
 
-        prepaidCard.transferToCard(BigDecimal.ZERO);
+        //prepaidCard.transferToCard(BigDecimal.ZERO);
 
         CanTransferTo canTransferTo = new CanTransferTo() {
             public void transferToCard(BigDecimal amount) {

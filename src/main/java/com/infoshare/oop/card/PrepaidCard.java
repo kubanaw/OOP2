@@ -8,8 +8,8 @@ public class PrepaidCard extends Card implements CanTransferTo {
 
     private boolean gift;
 
-    public PrepaidCard(String name, String number, BigDecimal balance, CustomerType customerType, boolean gift){
-        super(name, number, balance, customerType);
+    public PrepaidCard(String id, String name, String number, BigDecimal balance, CustomerType customerType, boolean gift){
+        super(id, name, number, balance, customerType);
         this.gift = gift;
     }
 

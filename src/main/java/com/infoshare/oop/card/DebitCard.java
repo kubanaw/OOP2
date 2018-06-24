@@ -6,12 +6,12 @@ import java.math.BigDecimal;
 
 public class DebitCard extends Card {
 
-    public DebitCard(String name, String number, CustomerType customerType){
-        super(name, number, customerType);
+    public DebitCard(String id, String name, String number, CustomerType customerType){
+        super(id, name, number, customerType);
     }
 
-    public DebitCard(String name, String number, BigDecimal balance, CustomerType customerType){
-        super(name, number, balance, customerType);
+    public DebitCard(String id, String name, String number, BigDecimal balance, CustomerType customerType){
+        super(id, name, number, balance, customerType);
     }
 
     @Override
